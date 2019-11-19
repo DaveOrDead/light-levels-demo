@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Light levels - Demo</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Catamaran:700"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="l-sticky-footer-container">
+      <header class="c-header">
+        <h1 class="c-title">Light Levels</h1>
+      </header>
+
+      <main class="l-main">
+        <div class="js-info-banner c-info-banner" aria-hidden="true">
+          <p class="c-info-banner__message c-info-banner__message--error">
+            <strong>Info:</strong> Your device
+            <a
+              rel="noopener noreferrer"
+              href="https://caniuse.com/#feat=ambient-light"
+              >does not support <strong>AmbientLightSensor</strong></a
+            >
+            so a simulator is being used for this demo
+          </p>
+          <p class="c-info-banner__message c-info-banner__message--success">
+            <strong>Congratulations:</strong> Your device is supported! Cover
+            the light sensor in order to activate the plugin.
+          </p>
+        </div>
+
+        <p class="h-spacing">
+          A polyfill for the
+          <a
+            rel="noopener noreferrer"
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/light-level"
+            >light-level CSS @media feature</a
+          >.
+        </p>
+
+        <p class="h-spacing">
+          This media feature can be used to adjust styles based on the ambient
+          light level - however since it's from a relatively recent Working
+          Draft, it currently has zero browser support.
+        </p>
+
+        <p class="h-spacing">
+          This polyfill allows you to write the upcoming syntax but uses it to
+          generate class names which you can apply to the
+          <code class="c-code">&lt;html&gt;</code> element in your markup in
+          order to achieve the same behaviour today:
+        </p>
+
+        <ul class="h-spacing">
+          <li>
+            <a
+              rel="noopener noreferrer"
+              href="https://github.com/daveordead/postcss-light-levels"
+              >PostCSS Plugin</a
+            >
+          </li>
+          <li>
+            <a
+              rel="noopener noreferrer"
+              href="https://github.com/daveordead/light-levels"
+              >JS Polyfill</a
+            >
+          </li>
+        </ul>
+
+        <p>
+          If your device is supported cover the light sensor with your hand or
+          expose it to bright light in order to see the colours on this page
+          change.
+        </p>
+      </main>
+
+      <footer class="l-footer">
+        <small class="c-copyright"
+          >&copy; 2019 -
+          <a rel="noopener noreferrer" href="https://davidberner.co.uk"
+            >David Berner</a
+          ></small
+        >
+      </footer>
+    </div>
+    <script src="./js/vendor/ambientLightSensorSimulator.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

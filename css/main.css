@@ -1,0 +1,136 @@
+@charset 'UTF-8';
+
+@import "backpack.css";
+
+/* Base */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #fff;
+  color: #222;
+  font-size: 1.5rem;
+  padding-top: 10rem;
+  transition: background-color ease 250ms, color ease 250ms;
+}
+
+a {
+  color: #e91e63;
+  text-decoration: underline;
+}
+
+/* Layout */
+
+.l-sticky-footer-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.l-main {
+  flex: 1 0 auto;
+  margin: 0 auto;
+  max-width: 48rem;
+  padding: 1rem;
+}
+
+.l-footer {
+  padding: 0.5rem;
+}
+
+/* Typography */
+
+.c-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.c-code {
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27, 31, 35, 0.05);
+  border-radius: 3px;
+}
+
+/* info banner */
+
+.c-info-banner {
+  background-color: #222;
+  border-bottom: 4px solid #fff;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2), 0 1px 0 1px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 1rem;
+  left: 0;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  transform: translateY(-100%);
+  transition: background-color ease 250ms, transform ease 250ms,
+    color ease 250ms;
+  width: 100%;
+  z-index: 1;
+}
+
+.c-info-banner.is-visible {
+  transform: translateY(0);
+}
+
+.c-info-banner__message {
+  display: none;
+}
+
+.c-info-banner.is-success .c-info-banner__message--success {
+  display: block;
+}
+
+.c-info-banner.is-error .c-info-banner__message--error {
+  display: block;
+}
+
+.c-copyright {
+  display: block;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Light level styles */
+
+@media (light-level: dim) {
+  body {
+    background-color: #222;
+    color: #fff;
+    transition: background-color ease 250ms, color ease 250ms;
+  }
+
+  .c-info-banner {
+    background-color: #fff;
+    color: #222;
+    transition: background-color ease 250ms, transform ease 250ms,
+      color ease 250ms;
+  }
+}
+
+@media (light-level: washed) {
+  /* cooling blue tones */
+  body {
+    background-color: #e1f5fe;
+    transition: background-color ease 250ms;
+  }
+}
+
+/* Helpers */
+
+.h-hide {
+  display: none;
+}
+
+.h-spacing {
+  margin-bottom: 2rem;
+}
