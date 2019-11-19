@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "backpack.css": "2.0.0",
-    "light-levels": "1.0.0"
+    "light-levels": "1.0.1"
   },
   "gh-pages-deploy": {
     "staticpath": "dist",
