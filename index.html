@@ -21,13 +21,14 @@
             <a
               rel="noopener noreferrer"
               href="https://caniuse.com/#feat=ambient-light"
-              >does not support <strong class="h-strong">AmbientLightSensor</strong></a
+              >does not support
+              <strong class="h-strong">AmbientLightSensor</strong></a
             >
             so a simulator is being used for this demo
           </p>
           <p class="c-info-banner__message c-info-banner__message--success">
-            <strong class="h-strong">Congratulations:</strong> Your device is supported! Cover
-            the light sensor in order to activate the plugin.
+            <strong class="h-strong">Congratulations:</strong> Your device is
+            supported! Cover the light sensor in order to activate the plugin.
           </p>
         </div>
 
@@ -46,21 +47,50 @@
           Draft, it currently has zero browser support.
         </p>
 
-
         <h2 class="c-subtitle h-spacing-small">Launch instructions</h2>
 
-        <p class="h-spacing-x-small">This demo will work with the following browsers:</p>
+        <p class="h-spacing-x-small">
+          This demo will work with the following browsers:
+        </p>
 
-        <ul class="h-spacing">
-            <li>
-                <p>
-                    <strong class="h-strong">Android - Chrome</strong>: please enable the <a href="chrome://flags/#enable-generic-sensor-extra-classes">chrome://flags/#enable-generic-sensor-extra-classes</a> flag.
-                </p>
+        <ul class="c-bullet-list h-spacing-large">
+          <li class="c-bullet-list__item">
+            <p class="h-spacing-small">
+              <strong class="h-strong">Chrome</strong>: both desktop and
+              Android. Please enable the
+              <a href="chrome://flags/#enable-generic-sensor-extra-classes"
+                >chrome://flags/#enable-generic-sensor-extra-classes</a
+              >
+              flag.
+            </p>
 
-                <p>
-                    The demo on this site works with Chrome 63 or later. If you have an older version of Chrome, please also enable the <a href="chrome://flags/#enable-generic-sensor">chrome://flags/#enable-generic-sensor flag</a>
-                </p>
-            </li>
+            <p>
+              The demo on this site works with Chrome 63 or later. If you have
+              an older version of Chrome, please also enable the
+              <a href="chrome://flags/#enable-generic-sensor"
+                >chrome://flags/#enable-generic-sensor flag</a
+              >
+            </p>
+          </li>
+
+          <li class="c-bullet-list__item">
+            <p>
+              <strong class="h-strong">Firefox</strong>: both desktop and
+              Android. Please enable the
+              <strong class="h-strong"
+                >#enable-generic-sensor-extra-classes</strong
+              >
+              flag in
+              <a href="about:config">about:config</a>
+            </p>
+          </li>
+
+          <li class="c-bullet-list__item">
+            <p class="h-spacing-small">
+              <strong class="h-strong">Edge</strong>: allegedly, but I have been
+              unable to test it.
+            </p>
+          </li>
         </ul>
 
         <p class="h-spacing-large">
@@ -72,7 +102,8 @@
         <h2 class="c-subtitle h-spacing-small">Plugins</h2>
 
         <p class="h-spacing">
-            To use light-level on your own projects, you can use the following plugins:
+          To use light-level on your own projects, you can use the following
+          plugins:
         </p>
 
         <ul class="h-spacing">
@@ -81,17 +112,19 @@
               rel="noopener noreferrer"
               href="https://github.com/daveordead/postcss-light-levels"
               >PostCSS Light Levels</a
-            > to convert future CSS syntax to equivalent classnames.
+            >
+            to convert future CSS syntax to equivalent classnames.
           </li>
           <li>
             <a
               rel="noopener noreferrer"
               href="https://github.com/daveordead/light-levels"
               >Light Levels</a
-            > JS Polyfill to append matching classes to the <code class="c-code">&lt;html&gt;</code> element.
+            >
+            JS Polyfill to append matching classes to the
+            <code class="c-code">&lt;html&gt;</code> element.
           </li>
         </ul>
-
       </main>
 
       <footer class="l-footer">

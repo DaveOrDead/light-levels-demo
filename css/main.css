@@ -62,6 +62,15 @@ a {
   padding: 0.2em 0.4em;
 }
 
+.c-bullet-list__item {
+  list-style-type: square;
+  margin-left: 1.5rem;
+}
+
+.c-bullet-list__item + .c-bullet-list__item {
+  margin-top: 1.5rem;
+}
+
 /* info banner */
 
 .c-info-banner {
