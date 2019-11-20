@@ -21,7 +21,7 @@
   infoBanner.setAttribute("aria-live", "polite");
   infoBanner.classList.add("is-visible");
 
-  if (isSupported) {
+  if (!isSupported) {
     window.AmbientLightSensor = function() {
       if (this == window) {
         throw new Error("AmbientLightSensor must be invoked with new.");
