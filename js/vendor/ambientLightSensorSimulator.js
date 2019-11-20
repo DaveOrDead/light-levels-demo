@@ -1,16 +1,28 @@
 (function() {
+  const isDeviceLightSupported = function() {
+    let hasSupport = false;
+
+    function setHasSupportTrue() {
+      hasSupport = true;
+    }
+    if ("devicelight" in window) {
+      window.addEventListener("devicelight", setHasSupportTrue);
+      window.removeEventListener("devicelight", setHasSupportTrue);
+    }
+
+    return hasSupport;
+  };
+  const isSupported =
+    "AmbientLightSensor" in window || isDeviceLightSupported();
   const infoBanner = document.querySelector(".js-info-banner");
-  infoBanner.classList.add(
-    "AmbientLightSensor" in window ? "is-success" : "is-error"
-  );
+  infoBanner.classList.add(isSupported ? "is-success" : "is-error");
   infoBanner.removeAttribute("aria-hidden");
   infoBanner.setAttribute("role", "status");
   infoBanner.setAttribute("aria-live", "polite");
   infoBanner.classList.add("is-visible");
 
-  window.AmbientLightSensor =
-    window.AmbientLightSensor ||
-    function() {
+  if (isSupported) {
+    window.AmbientLightSensor = function() {
       if (this == window) {
         throw new Error("AmbientLightSensor must be invoked with new.");
       }
@@ -76,4 +88,5 @@
         })
       );
     };
+  }
 })();
