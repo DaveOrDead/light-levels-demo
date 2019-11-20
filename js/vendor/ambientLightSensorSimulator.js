@@ -1,19 +1,6 @@
 (function() {
-  const isDeviceLightSupported = function() {
-    let hasSupport = false;
-
-    function setHasSupportTrue() {
-      hasSupport = true;
-    }
-    if ("devicelight" in window) {
-      window.addEventListener("devicelight", setHasSupportTrue);
-      window.removeEventListener("devicelight", setHasSupportTrue);
-    }
-
-    return hasSupport;
-  };
   const isSupported =
-    "AmbientLightSensor" in window || isDeviceLightSupported();
+    "AmbientLightSensor" in window || "ondevicelight" in window;
   const infoBanner = document.querySelector(".js-info-banner");
   infoBanner.classList.add(isSupported ? "is-success" : "is-error");
   infoBanner.removeAttribute("aria-hidden");
