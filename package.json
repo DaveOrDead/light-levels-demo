@@ -11,14 +11,14 @@
   "author": "David Berner <davidajberner@gmail.com> (https://davidberner.co.uk/)",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "9.7.1",
+    "autoprefixer": "9.7.4",
     "gh-pages-deploy": "^0.5.1",
     "parcel-bundler": "1.12.4",
     "postcss-light-levels": "^1.0.1"
   },
   "dependencies": {
     "backpack.css": "2.0.0",
-    "light-levels": "^2.1.0"
+    "light-levels": "^2.2.0"
   },
   "gh-pages-deploy": {
     "staticpath": "dist",
